@@ -72,7 +72,11 @@ describe('index.js', function () {
 
     it('returns the correct reduced value when not passed an initial value', function () {
       const reduceSansAcc = myReduce(testArr, callback)
-      expect(reduceSansAcc).to.equal(28)
+      expect(reduceSansAcc).to.equal(28) // this is wrong, right? 
+      // like running [1, 2, 3, 4] through callback with a starting 
+      // value of 0 is 30? alternatively, taking the 40 that 
+      // running it with a callback of 10 returns above and taking that starting
+      // 10 away would get 30, not 28?
     })
 
     it('does not modify the original array', function () {
